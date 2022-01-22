@@ -2,7 +2,6 @@ from datetime import datetime
 import requests
 import json
 
-from django.contrib.auth.models import User
 from django.db.models import Q
 from django.utils.timezone import make_naive
 
