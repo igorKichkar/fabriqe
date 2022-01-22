@@ -15,8 +15,8 @@ class Customer(models.Model):
     time_zone = models.CharField(max_length=50)
 
 
-class Massage(models.Model):
+class Message(models.Model):
     date_of_creation = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=50)
+    status = models.CharField(max_length=50, null=True)
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
-    mailing = models.ForeignKey(Mailing, on_delete=models.SET_NULL, null=True)
+    mailing = models.ForeignKey(Mailing, on_delete=models.SET_NULL, null=True, related_name='mailig_complete')

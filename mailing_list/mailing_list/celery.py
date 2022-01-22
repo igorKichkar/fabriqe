@@ -10,8 +10,8 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
-    'ok_2': {
-        'task': 'alert.tasks.ok_2',
+    'sending': {
+        'task': 'alert.tasks.sending',
         'schedule': crontab(minute='*/1'),
     },
 }
