@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
+    'rest_framework_swagger',
+
     'alert',
 
 ]
@@ -136,3 +138,8 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'fake_mail@gmail.com'  # enter your worker email
+EMAIL_HOST_PASSWORD = '1111'            # and password

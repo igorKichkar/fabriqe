@@ -14,4 +14,8 @@ app.conf.beat_schedule = {
         'task': 'alert.tasks.sending',
         'schedule': crontab(minute='*/1'),
     },
+    'send_daily_statistics': {
+        'task': 'alert.tasks.send_daily_statistics',
+        'schedule': crontab(minute=0, hour='*/24'),
+    },
 }
